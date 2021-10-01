@@ -15,7 +15,7 @@ async function main() {
 
   // We get the contract to deploy
   const MindlessLines = await hre.ethers.getContractFactory("MindlessLines");
-  const ml = await MindlessLines.deploy("/");
+  const ml = await MindlessLines.deploy("https://us-central1-mindleines.cloudfunctions.net/token/");
 
   await ml.deployed();
 
